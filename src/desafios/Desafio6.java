@@ -5,38 +5,36 @@ import java.util.Scanner;
 public class Desafio6 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Insira a peça:");
+        System.out.print("Insira a peça:");
         String  peça = entrada.nextLine();
 
-        System.out.println("Insira o código da peça:");
-        double  cod = entrada.nextDouble();
-
-        System.out.println("Insira o valor da peça:");
-        double  valor = entrada.nextDouble();
-
-        System.out.println("Insira a quantidade de peças:");
-        double  quant = entrada.nextDouble();
-
-        // se houver uma segunda peça
-
-
-        System.out.println("Insira a segunda peça:");
+        System.out.print("Insira a segunda peça:");
         String  peça2 = entrada.nextLine();
 
-        System.out.println("Insira o código da segunda peça:");
+        System.out.printf("Insira o código da %s:", peça);
+        double  cod = entrada.nextDouble();
+
+        System.out.printf("Insira o valor da %s:", peça);
+        double  valor = entrada.nextDouble();
+
+        System.out.printf("Insira a quantidade de %ss:", peça);
+        double  quant = entrada.nextDouble();
+
+        // peça 2
+
+        System.out.printf("Insira o código da %s:", peça2);
         double  cod2 = entrada.nextDouble();
 
-        System.out.println("Insira o valor da segunda peça:");
+        System.out.printf("Insira o valor da %s:", peça2);
         double  valor2 = entrada.nextDouble();
-        
-        final double ipi = valor * 15/100 ;
-        double valorf = valor + ipi;
-        double valorf2 = valor2 + ipi;
 
-        System.out.println();
+        System.out.printf("Insira a quantidade de %ss:", peça2);
+        double  quant2 = entrada.nextDouble();
 
+        double ipi = (valor * quant + valor2 * quant2) * 15 / 100;
+        double total =  (valor * quant + valor2 * quant2) + ipi;
 
-
+        System.out.printf("o valor da sua compra é: R$%.2f", total);
 
         entrada.close();
 
