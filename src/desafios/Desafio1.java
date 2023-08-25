@@ -15,7 +15,7 @@ public class Desafio1 {
         System.out.printf(" %d anos %d meses e quantos dias?\n", ano , meses);
         int  dias = entrada.nextInt();
 
-        System.out.println( "Você possui " + ((ano*365) + (meses*30)+ dias) + " dias de vida"  );
+        System.out.println( "Você possui " + ((ano*365) + (meses*30)+ dias) + " dias de vida."  );
 
         entrada.close();
     }
